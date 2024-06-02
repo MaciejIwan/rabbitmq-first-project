@@ -1,4 +1,4 @@
-package com.miwan.course.rabbitmq.rabbitmqcourse;
+package com.miwan.course.rabbitmq.rabbitmqpublisher;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

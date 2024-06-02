@@ -1,10 +1,10 @@
-package com.miwan.course.rabbitmq.rabbitmqcourse;
+package com.miwan.course.rabbitmq.rabbitmqpublisher;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RabbitMqCourseApplicationTests {
+class RabbitmqpublisherApplicationTests {
 
     @Test
     void contextLoads() {

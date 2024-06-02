@@ -1,21 +1,20 @@
-package com.miwan.course.rabbitmq.rabbitmqcourse;
+package com.miwan.course.rabbitmq.rabbitmqpublisher;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @RequiredArgsConstructor
-public class RabbitMqCourseApplication implements CommandLineRunner {
-
+public class RabbitmqpublisherApplication implements CommandLineRunner {
     private final RabbitTemplate rabbitTemplate;
 
     public static void main(String[] args) {
-        SpringApplication.run(RabbitMqCourseApplication.class, args);
+        SpringApplication.run(RabbitmqpublisherApplication.class, args);
     }
+
 
     @Override
     public void run(String... args) throws Exception {
