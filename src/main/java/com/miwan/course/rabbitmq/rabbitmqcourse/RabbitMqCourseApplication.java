@@ -1,13 +1,24 @@
 package com.miwan.course.rabbitmq.rabbitmqcourse;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RabbitMqCourseApplication {
+@RequiredArgsConstructor
+public class RabbitMqCourseApplication implements CommandLineRunner {
+
+    private final RabbitTemplate rabbitTemplate;
 
     public static void main(String[] args) {
         SpringApplication.run(RabbitMqCourseApplication.class, args);
     }
 
+    @Override
+    public void run(String... args) throws Exception {
+        rabbitTemplate.convertAndSend("TestExchange", "testRouting", "Hello from RabbitMQ course!");
+    }
 }
